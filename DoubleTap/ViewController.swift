@@ -48,22 +48,19 @@ class ViewController: UIViewController {
         
         gestureView.addSubview(heart)
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+        UIView.animate(withDuration: 0.5, animations: {
+            heart.alpha = 1
+        }, completion: { done in
             
-            UIView.animate(withDuration: 0.5, animations: {
-                heart.alpha = 1
-            }, completion: { done in
-                
-                if done{
-                    UIView.animate(withDuration: 1, animations: {
-                        heart.alpha = 0
-                    },completion: { done in
-                        if done {
-                            heart.removeFromSuperview()
-                        }
-                    })
-                }
-            })
+            if done{
+                UIView.animate(withDuration: 1, animations: {
+                    heart.alpha = 0
+                },completion: { done in
+                    if done {
+                        heart.removeFromSuperview()
+                    }
+                })
+            }
         })
     }
 }
