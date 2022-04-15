@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         tapGesture.numberOfTapsRequired = 2
         imageView.addGestureRecognizer(tapGesture)
         
+        print("fff")
+        
     }
     @objc private func didDoubleTap( _ gesture: UITapGestureRecognizer) {
         
@@ -62,6 +64,8 @@ class ViewController: UIViewController {
                 })
             }
         })
+        
+        
     }
 }
 
