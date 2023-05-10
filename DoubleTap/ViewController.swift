@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         imageView.addGestureRecognizer(tapGesture)
         
         print("fff")
+        print("push in Max2")
         
     }
     @objc private func didDoubleTap( _ gesture: UITapGestureRecognizer) {
